@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <defs><linearGradient id="h" x1="0" x2="1"><stop offset="0" stop-color="#003366"/><stop offset="1" stop-color="#1464b4"/></linearGradient></defs>
+  <rect width="1200" height="400" fill="url(#h)"/><g fill="#fff" opacity="0.85"><circle cx="1000" cy="80" r="60"/><rect x="140" y="120" width="300" height="200" rx="18"/><rect x="480" y="150" width="300" height="160" rx="18"/></g>
+  <text x="60" y="220" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="48">Fast • Secure • Reliable Loans</text>
+</svg>

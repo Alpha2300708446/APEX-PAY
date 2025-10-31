@@ -1,0 +1,144 @@
+/* =======================
+   Apex Pay — Neon's Gold Theme
+   Organized, commented, mobile-first
+   Design: Fancy (Design D)
+   Structure: Multi-page (no JS)
+   ======================= */
+
+/* -----------------------
+   Variables & Base
+   ----------------------- */
+:root{
+  --bg: #0b0f14;
+  --card: #081018;
+  --muted: #9aa6b2;
+  --text: #e6eef6;
+  --accent: #ff9900; /* gold/orange neon */
+  --accent-2: #ffd07a;
+  --glass: rgba(255,255,255,0.03);
+  --max-w: 1100px;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* -----------------------
+   Reset & Layout
+   ----------------------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial; background:linear-gradient(180deg,#061018 0%, #071022 60%); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+/* Container */
+.container{max-width:var(--max-w);margin:0 auto;padding:20px}
+
+/* -----------------------
+   Header & Navigation
+   ----------------------- */
+.site-header{padding:18px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.logo{height:44px;filter:drop-shadow(0 6px 18px rgba(255,153,0,0.12))}
+
+/* Nav */
+.main-nav{display:flex;gap:18px;align-items:center}
+.main-nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;transition:all .18s}
+.main-nav a:hover{color:var(--text);background:linear-gradient(90deg,rgba(255,153,0,0.06),transparent);box-shadow:inset 0 -2px 0 rgba(255,153,0,0.04)}
+.main-nav a.active{color:var(--accent-2);box-shadow:0 6px 20px rgba(255,153,0,0.06)}
+
+/* Hamburger (CSS only) */
+.nav-toggle{display:none}
+.nav-toggle-label{display:none}
+.nav-toggle-label span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:3px;transition:all .2s}
+
+/* -----------------------
+   Hero
+   ----------------------- */
+.hero{display:flex;gap:28px;align-items:center;padding:48px 0}
+.hero-content{flex:1}
+.hero h1{font-size:clamp(28px,5vw,48px);line-height:1.02;margin-bottom:8px;text-shadow:0 6px 24px rgba(255,153,0,0.06)}
+.lead{color:var(--accent-2);margin-bottom:18px}
+
+/* CTA */
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;text-align:center}
+.cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#081018;box-shadow:0 12px 40px rgba(255,153,0,0.12),0 0 30px rgba(255,153,0,0.06)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+
+/* Hero visual */
+.hero-visual img{max-width:420px;width:100%;display:block;filter:drop-shadow(0 30px 50px rgba(0,0,0,0.6))}
+
+/* -----------------------
+   Features & Lists
+   ----------------------- */
+.section-title{color:var(--accent-2);margin-bottom:12px;font-size:18px}
+.feature-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;list-style:none;margin-top:12px}
+.feature-list li{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;box-shadow:var(--shadow)}
+
+/* -----------------------
+   Cards / Showcase
+   ----------------------- */
+.cards-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+
+/* -----------------------
+   Forms
+   ----------------------- */
+form{display:block}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.form-grid label{display:block}
+.form-grid input,.form-grid select{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.form-grid label.full{grid-column:1/-1}
+.form-actions{grid-column:1/-1;display:flex;gap:12px;align-items:center}
+
+/* Aside note */
+.note{margin-top:14px;padding:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:10px}
+
+/* -----------------------
+   Contact & Map
+   ----------------------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.map{height:160px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* -----------------------
+   Utilities & Footer
+   ----------------------- */
+.muted{color:var(--muted)}
+.site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.02);margin-top:28px}
+.footer-inner{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+
+/* -----------------------
+   Responsive (mobile-first)
+   ----------------------- */
+@media (max-width:900px){
+  .feature-list{grid-template-columns:repeat(2,1fr)}
+  .cards-row{grid-template-columns:repeat(2,1fr)}
+  .hero{flex-direction:column-reverse;align-items:flex-start}
+  .hero-visual img{max-width:320px}
+  .form-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+/* Small phones */
+@media (max-width:520px){
+  .header-inner{padding:8px 0}
+  .main-nav{display:none}
+  .nav-toggle-label{display:block;cursor:pointer}
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2){opacity:0}
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  /* show menu when toggled */
+  .nav-toggle:checked ~ .main-nav{display:flex;flex-direction:column;position:absolute;left:12px;right:12px;top:68px;background:linear-gradient(180deg,rgba(8,16,24,0.98),rgba(8,12,18,0.95));padding:12px;border-radius:10px;gap:8px;box-shadow:0 30px 80px rgba(0,0,0,0.6)}
+  .main-nav a{padding:12px}
+  .feature-list{grid-template-columns:1fr}
+  .cards-row{grid-template-columns:1fr}
+  .hero-visual img{max-width:260px}
+}
+
+/* -----------------------
+   Accessibility helpers
+   ----------------------- */
+a:focus{outline:3px solid rgba(255,153,0,0.18);outline-offset:3px}
+button:focus{outline:3px solid rgba(255,153,0,0.18);outline-offset:2px}
+
+/* =======================
+   End of CSS
+   ======================= */

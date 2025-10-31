@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Apply — Apex Pay Services</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="theme-gold">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Apex Pay logo" class="logo"/><span class="brand-text">Apex Pay</span></a>
+      <input id="nav-toggle-2" type="checkbox" class="nav-toggle"/>
+      <label for="nav-toggle-2" class="nav-toggle-label" aria-hidden="true"><span></span><span></span><span></span></label>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="apply.html" class="active">Apply</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card large-form">
+      <h2>Loan Application (Mock)</h2>
+      <p class="muted">This form is a static layout for your class project — no JS, no backend.</p>
+
+      <form class="form-grid" action="#" method="POST">
+        <label><span>Full name</span><input name="fullname" required></label>
+        <label><span>National ID</span><input name="nid" required></label>
+        <label><span>Phone</span><input name="phone" required></label>
+        <label><span>Loan amount (UGX)</span><input name="amount" type="number" required></label>
+        <label><span>Repayment period (months)</span>
+          <select name="months">
+            <option>1</option><option>3</option><option>6</option>
+          </select>
+        </label>
+        <label class="full"><span>Occupation</span><input name="occupation"></label>
+
+        <div class="form-actions">
+          <button class="btn cta" type="submit">Submit (mock)</button>
+          <a class="btn ghost" href="index.html">Cancel</a>
+        </div>
+      </form>
+
+      <aside class="note">
+        <h4>Payment Options</h4>
+        <ul class="pay-list">
+          <li>MTN Mobile Money (via aggregator)</li>
+          <li>Airtel Money (via aggregator)</li>
+          <li>Visa / MasterCard (card)</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Apex Pay Services</div>
+      <div>Plot 108 Nakawa Portbell Road • apexpay@gmail.com • 0770822929</div>
+    </div>
+  </footer>
+</body>
+</html>
